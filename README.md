@@ -2,7 +2,7 @@
 
 Steps to preview application - 
 ```
-cd starbucks-landing
+cd parallax-scrolling-effect
 npm install
 npm run dev
 
