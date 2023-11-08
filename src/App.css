@@ -1,0 +1,68 @@
+body {
+  background: var(--light-blue);
+  min-height: 1500px;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Will hide all the elements which is overflowing in this section. 
+                       Here overflow will happen in vertically*/
+}
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, var(--light-blue), transparent );
+  z-index: 10000;
+}
+
+section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--light-blue);
+  z-index: 10000;
+  mix-blend-mode: color;
+}
+
+section h1 {
+  font-size: 9em;
+  position: relative;
+  color: var(--white);
+  text-align: center;
+}
+
+section img:nth-child(4) {
+  z-index: 1;
+}
+
+article {
+  padding: 100px 80px 50px;
+}
+article h4 {
+  color: var(--white);
+  font-size: 3em;
+  line-height: 80px;
+}
+article p {
+  color: var(--white);
+  font-size: 1em;
+  margin-bottom: 14px;
+}
